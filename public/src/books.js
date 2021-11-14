@@ -4,7 +4,11 @@ function findAuthorById(authors, id) {
 }
 
 function findBookById(books, id) {
-  const result = books.find(book => book.id === id);
+  let result = 0;
+for (book in books)
+  if (books[book].id === id){
+     result = books[book];
+  }
   return result;
 }
 
